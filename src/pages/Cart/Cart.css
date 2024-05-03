@@ -1,0 +1,128 @@
+.cart {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.go-to-buy {
+    width: 100%;
+    background-color: var(--light-grey);
+    color: var(--white);
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.go-to-buy>button {
+    transition: .5s;
+    padding: 7px 30px;
+    font-weight: bold;
+    background-color: var(--theme-color);
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.go-to-buy>button>.icon {
+    font-size: 20px;
+    animation: row-right 1.5s forwards infinite;
+}
+
+.go-to-buy>button:hover {
+    opacity: 70%;
+}
+
+.total-price-to-pay {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--theme-color);
+}
+
+.cart>.no-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 70px 0;
+    background-image: url(../../../public/image/bg.png);
+    width: 100%;
+    border-radius: 20px;
+}
+
+.cart>.no-product .icon {
+    font-size: 180px;
+}
+
+.cart>.no-product .title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cart>.no-product .go-product-page {
+    border: solid 1px var(--dark-grey);
+    padding: 4px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--dark-grey);
+    transition: .5s;
+}
+
+.cart>.no-product .go-product-page:hover {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+@keyframes row-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .cart {
+        padding: 5px;
+    }
+
+    .go-to-buy {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cart>.no-product .icon {
+        font-size: 100px;
+    }
+
+    .cart>.no-product .title {
+        font-size: 17px;
+    }
+
+    .cart>.no-product .go-product-page {
+        font-size: 11px;
+    }
+
+}

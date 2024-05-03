@@ -1,0 +1,54 @@
+.topBar-register-box {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topBar-register-box>a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topBar-register-user-icon {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    padding: 10px 10px;
+    border-radius: 500px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topBar-register-datas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10px;
+    color: var(--dark-grey);
+    width: 100%;
+    overflow: hidden;
+}
+
+.topBar-register-datas-user-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.topBar-register-datas-user-status {
+    max-width: 95%;
+    overflow: hidden;
+}
+
+.topBar-register-box:hover .topBar-register-user-icon {
+    background-color: var(--theme-color);
+    color: var(--white);
+}
+
+.topBar-register-box:hover .topBar-register-datas-user-name {
+    color: var(--theme-color);
+}

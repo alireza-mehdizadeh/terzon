@@ -1,0 +1,67 @@
+.not-found-wrapper {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(../../../public/image/bg.png);
+}
+
+.not-found-wrapper img {
+    width: 40%;
+}
+
+.not-found-wrapper h1 {
+    color: var(--dark-grey);
+    font-size: 32px;
+    margin-top: 50px;
+}
+
+.not-found-wrapper span {
+    color: var(--dark-grey);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.not-found-wrapper button {
+    padding: 8px 20px;
+    color: var(--theme-color);
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: transparent;
+    border: solid 2px var(--theme-color);
+    transition: .5s;
+}
+
+.not-found-wrapper button:hover {
+    background-color: var(--theme-color);
+    color: var(--white);
+}
+
+@media screen and (max-width: 500px) {
+    .not-found-wrapper img {
+        width: 60%;
+    }
+
+    .not-found-wrapper h1 {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+
+    .not-found-wrapper span{
+        font-size: 7px;
+    }
+
+    .not-found-wrapper button {
+        font-size: 8px;
+        padding: 5px 11px;
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Yekan Bakh';
+  src: local('YekanBakh-Regular'),
+    url('../public/font/YekanBakh-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../public/font/YekanBakh-Regular.woff2') format('woff2'),
+    url('../public/font/YekanBakh-Regular.woff') format('woff'),
+    url('../public/font/YekanBakh-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --theme-color: #ff2247;
+  --white: #ffffff;
+  --black: #0a0a0a;
+  --green: #60BD10;
+  --yellow: #FFF3CD;
+  --yellow-2: #f3b63d;
+  --pink: #ffcece;
+  --light-red: #ff7a7a;
+  --red: #ff2626;
+  --very-light-grey: #f7f7f7;
+  --light-grey: #e6e6e6;
+  --grey: #bdbdbd;
+  --dark-grey: #636363;
+  --body-bg: #eeeeee;
+}
+
+*,
+input,
+select {
+  font-family: 'Yekan Bakh', 'vazir';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+body {
+  background-color: var(--body-bg);
+  position: relative;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+  display: inline-block;
+}

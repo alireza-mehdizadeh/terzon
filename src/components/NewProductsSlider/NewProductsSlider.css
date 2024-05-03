@@ -1,0 +1,35 @@
+.newProductsSlider {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: var(--white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.newProductsSlider .header {
+    height: auto;
+    font-weight: bold;
+    border-bottom: 2px solid var(--light-grey);
+    padding: 10px 0;
+    padding-top: 0;
+}
+
+.newProductsSlider .header span {
+    color: var(--theme-color);
+    border-bottom: 2px solid var(--theme-color);
+    padding: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--grey) !important;
+    transition: .5s;
+    opacity: 70%;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    opacity: 100%;
+}

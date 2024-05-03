@@ -1,0 +1,50 @@
+.categoryBox {
+    flex: 1;
+    border-radius: 15px;
+    background-color: var(--white);
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.categoryBox img {
+    width: 60px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.categoryBox .name-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoryBox h4 {
+font-size: 16px;
+color: var(--black);
+}
+
+.categoryBox span {
+    color: var(--dark-grey);
+    font-size: 13px;
+}
+
+.categoryBox:hover {
+    background-color: var(--theme-color);
+    transform: translateY(-7px);
+}
+
+.categoryBox:hover h4 {
+    color: var(--white);
+}
+
+.categoryBox:hover span {
+    color: var(--light-grey);
+}

@@ -1,0 +1,55 @@
+.add-new-comment-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+.add-new-comment-wrapper>input,
+.add-new-comment-wrapper>textarea {
+    border: none;
+    background-color: var(--very-light-grey);
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.add-new-comment-wrapper>input:focus,
+.add-new-comment-wrapper>textarea:focus {
+    outline: none;
+    background-color: var(--light-grey);
+}
+
+.add-new-comment-wrapper>textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 77px;
+}
+
+.add-new-comment-wrapper>label {
+    margin-top: 15px;
+    margin-bottom: 3px;
+    color: var(--dark-grey);
+    font-weight: bold;
+}
+
+.add-new-comment-wrapper>button {
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+    background-color: var(--grey);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    opacity: 100%;
+    transition: .5s;
+}
+
+.add-new-comment-wrapper>button:hover {
+    background-color: var(--dark-grey);
+}
