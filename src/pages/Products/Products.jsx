@@ -8,9 +8,7 @@ import TopBar from "../../components/TopBar/TopBar"
 import Footer from "../../components/Footer/Footer"
 
 export default function Products() {
-  const [products, setProducts] = useFirebase(
-    "https://terzon-back.iran.liara.run/products"
-  )
+  const [products, setProducts] = useFirebase("http://localhost:3000/products")
   let locationData = useLocation()
   const [searchWord, setSearchWord] = useState(locationData.search.slice(10))
 
@@ -39,10 +37,7 @@ export default function Products() {
             )}
           </div>
         </Accordion>
-        <Accordion
-          open={searchWord === "mobile"}
-          title="موبایل هوشمند و تلفن ساده"
-        >
+        <Accordion open={searchWord === "mobile"} title="موبایل هوشمند و تلفن ساده">
           <div className="products-card-box">
             {products.map(
               (productObj) =>
@@ -76,10 +71,7 @@ export default function Products() {
             )}
           </div>
         </Accordion>
-        <Accordion
-          open={searchWord === "accessories"}
-          title="لوازم جانبی موبایل و لپتاپ"
-        >
+        <Accordion open={searchWord === "accessories"} title="لوازم جانبی موبایل و لپتاپ">
           <div className="products-card-box">
             {products.map(
               (productObj) =>

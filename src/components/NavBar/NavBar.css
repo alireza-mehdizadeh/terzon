@@ -2,6 +2,7 @@
     list-style-type: none;
     display: flex;
     gap: 28px;
+    height: 10px;
 }
 
 .nav-list>li>a {

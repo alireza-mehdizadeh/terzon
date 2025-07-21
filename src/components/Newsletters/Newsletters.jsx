@@ -1,49 +1,58 @@
-import React, { Component } from 'react'
-import './Newsletters.css'
+import React, { Component } from "react"
+import "./Newsletters.css"
 
 export default class Newsletters extends Component {
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            phoneNumberBox: '',
-            submitBtn: 'عضوم کن'
-        }
-
-        this.phoneNumberBoxHandler = this.phoneNumberBoxHandler.bind(this)
-        this.submitPhoneNumber = this.submitPhoneNumber.bind(this)
+  constructor(props) {
+    super(props)
+    this.state = {
+      phoneNumberBox: "",
+      submitBtn: "عضوم کن",
     }
 
-    phoneNumberBoxHandler(ev) {
-        this.setState({ phoneNumberBox: ev.target.value })
-    }
+    this.phoneNumberBoxHandler = this.phoneNumberBoxHandler.bind(this)
+    this.submitPhoneNumber = this.submitPhoneNumber.bind(this)
+  }
 
-    submitPhoneNumber() {
-        this.setState({ submitBtn: 'ارسال...' })
+  phoneNumberBoxHandler(ev) {
+    this.setState({ phoneNumberBox: ev.target.value })
+  }
 
-        fetch('https://terzon-back.iran.liara.run/newsletters', {
-            method: 'POST',
-            body: JSON.stringify(this.state.phoneNumberBox)
-        }).then(res => {
-            console.log(res)
-            this.setState({ phoneNumberBox: '' })
-            this.setState({ submitBtn: 'ارسال شد' })
-            setTimeout(() => {
-                this.setState({ submitBtn: 'عضوم کن' })
-            }, 3000);
-        })
-    }
+  submitPhoneNumber() {
+    this.setState({ submitBtn: "ارسال..." })
 
-    render() {
-        return (
-            <div className='newsletters-wrapper'>
-                <span>عضویت در خبرنامه</span>
-                <p>با عضویت در خبرنامه از آخرین محصولات سایت مطلع شوید...</p>
-                <div>
-                    <input onChange={this.phoneNumberBoxHandler} value={this.state.phoneNumberBox} type="tel" placeholder='شماره تماس...' />
-                    <button disabled={this.state.submitBtn !== 'عضوم کن' || !this.state.phoneNumberBox} onClick={this.submitPhoneNumber}>{this.state.submitBtn}</button>
-                </div>
-            </div>
-        )
-    }
+    fetch("http://localhost:3000/newsletters", {
+      method: "POST",
+      body: JSON.stringify(this.state.phoneNumberBox),
+    }).then((res) => {
+      console.log(res)
+      this.setState({ phoneNumberBox: "" })
+      this.setState({ submitBtn: "ارسال شد" })
+      setTimeout(() => {
+        this.setState({ submitBtn: "عضوم کن" })
+      }, 3000)
+    })
+  }
+
+  render() {
+    return (
+      <div className="newsletters-wrapper">
+        <span>عضویت در خبرنامه</span>
+        <p>با عضویت در خبرنامه از آخرین محصولات سایت مطلع شوید...</p>
+        <div>
+          <input
+            onChange={this.phoneNumberBoxHandler}
+            value={this.state.phoneNumberBox}
+            type="tel"
+            placeholder="شماره تماس..."
+          />
+          <button
+            disabled={this.state.submitBtn !== "عضوم کن" || !this.state.phoneNumberBox}
+            onClick={this.submitPhoneNumber}
+          >
+            {this.state.submitBtn}
+          </button>
+        </div>
+      </div>
+    )
+  }
 }
